@@ -38,7 +38,7 @@ public class Helmet implements Headgear {
 
         return this.safetyCertified;
     }
-    // Tester!!
+     //Tester!!
     public class HeadgearTest {
 
         public static void main(String [] args) throws IllegalAccessException {
