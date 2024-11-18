@@ -1,5 +1,6 @@
 package src;
 
+
 import java.util.Objects;
 
 /**
@@ -169,7 +170,7 @@ public class Coursework1Main {
     private static CargoBox makeAddTwoItemSameAndNullCargoBox() {
         CargoBox k = makeEmptyCargoBox();
         k.add(ITEM8);
-        k.add(null);
+        k.add((null));
         k.add(ITEM8);
         return k;
     }
@@ -180,7 +181,7 @@ public class Coursework1Main {
     private static CargoBox makeAddTwoItemAndNullCargoBox() {
         CargoBox k = makeEmptyCargoBox();
         k.add(ITEM1);
-        k.add(null);
+        k.add((null));
         k.add(ITEM2);
         return k;
     }
@@ -306,6 +307,4 @@ public class Coursework1Main {
         System.out.println(YEA + ": " + passes);
         System.out.println(NAY + ": " + fails);
     }
-
-
 }
