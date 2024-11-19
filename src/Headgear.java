@@ -1,5 +1,8 @@
 package src;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public interface Headgear {
 
     /**
@@ -21,5 +24,16 @@ public interface Headgear {
     boolean isSafetyCertified();
 
     double valueComputed();
+
+    static double totalValue(Headgear[] headgearArray){
+        if (headgearArray == null){
+            throw new IllegalArgumentException("Headgear array CANNOT be null!");
+        }
+
+        return Arrays.stream(headgearArray)
+                .filter(Objects::nonNull)
+                .mapToDouble(Headgear::valueComputed)
+                .sum();
+    }
 }
 
