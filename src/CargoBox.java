@@ -102,6 +102,7 @@ public class CargoBox {
         if (itemsToAdd == null){ // using week 8 material to make sure thing will run smoothly
             throw new IllegalAccessException("Input array can't be null");
         }
+        boolean added = true;
         if (itemsToAdd != null) { // ensuring that is not null
             for (Item item : itemsToAdd) {
                 if (item != null) { // skip null items in the array
