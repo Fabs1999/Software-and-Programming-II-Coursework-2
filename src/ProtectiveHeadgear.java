@@ -1,4 +1,4 @@
-import src.Headgear;
+package src;
 
 public abstract class ProtectiveHeadgear implements Headgear {
     private double protectionFactor;
@@ -9,13 +9,13 @@ public abstract class ProtectiveHeadgear implements Headgear {
      * @throws IllegalAccessException if the protection factor is negative
      */
 
-    public ProtectiveHeadgear(double protectionFactor){
+    public ProtectiveHeadgear(double protectionFactor) throws IllegalAccessException {
         setProtectionFactor(protectionFactor);
     }
 
-    public double setProtectionFactor(double protectionFactor){
+    public double setProtectionFactor(double protectionFactor) throws IllegalAccessException {
         if (protectionFactor < 0){
-            throw new IllegalAccessException("Protection factor cannot be negative!")
+            throw new IllegalAccessException("Protection factor cannot be negative!");
         }
         return protectionFactor;
     }

@@ -19,5 +19,7 @@ public interface Headgear {
      * @return has to be true if it is safety certfied, othewise FALSE.
      */
     boolean isSafetyCertified();
+
+    double valueComputed();
 }
 
