@@ -33,6 +33,6 @@ public class Crown implements Headgear{
 
     @Override
     public String toString() {
-        return "Cown with " + jewelsQuantity + "jewels, value " + valueComputed();
+        return "Crown with " + jewelsQuantity + " jewels, value " + valueComputed();
     }
 }

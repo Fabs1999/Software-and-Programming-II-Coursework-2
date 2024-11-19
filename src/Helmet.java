@@ -43,7 +43,7 @@ public class Helmet implements Headgear {
     public double valueComputed() {
         return 0;
     }
-    
+
 }
 
 

@@ -18,8 +18,10 @@ public abstract class ProtectiveHeadgear implements Headgear {
         if (protectionFactor < 0) {
             throw new IllegalArgumentException("Protection factor cannot be negative!");
         }
+        this.protectionFactor = protectionFactor;
         return protectionFactor;
     }
+
 
     // gets the protection factor of the headgear
     public double getProtectionFactor() {

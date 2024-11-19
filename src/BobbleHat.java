@@ -3,7 +3,7 @@ package src;
 public class BobbleHat extends ProtectiveHeadgear {
     private int bobbleDiameter;
 
-    public BobbleHat(double protectionFactor, int bobbleDiameter) throws IllegalArgumentException {
+    public BobbleHat(double protectionFactor, int bobbleDiameter) throws IllegalArgumentException, IllegalAccessException {
         super(protectionFactor);
         if (bobbleDiameter <= 0){
             throw new IllegalArgumentException("the Bobble diameter has to be positive!");

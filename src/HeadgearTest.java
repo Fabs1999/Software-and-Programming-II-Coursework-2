@@ -2,7 +2,7 @@ package src;
 
 public class HeadgearTest {
 
-    public static void main(String [] args) throws IllegalArgumentException {
+    public static void main(String [] args) throws IllegalArgumentException, IllegalAccessException {
         // test crown
         Headgear crown = new Crown(5);
         System.out.println(crown);
