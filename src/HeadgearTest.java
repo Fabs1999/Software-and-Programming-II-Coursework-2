@@ -2,7 +2,7 @@ package src;
 
 public class HeadgearTest {
 
-    public static void main(String [] args){
+    public static void main(String [] args) throws IllegalArgumentException {
         // test crown
         Headgear crown = new Crown(5);
         System.out.println(crown);
@@ -17,6 +17,6 @@ public class HeadgearTest {
 
 
         Headgear[] headgearArray = {crown, scooterHelmet, bobbleHat};
-        System.out.println("Total Value is: " + totalVale.totalValue(headgearArray));
+        System.out.println("Total Value is: " + Headgear.totalValue(headgearArray));
     }
 }

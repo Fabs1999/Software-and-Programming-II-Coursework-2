@@ -13,10 +13,10 @@ public class Helmet implements Headgear {
      * @param safetyCertified
      * @throws IllegalAccessException
      */
-    public Helmet(int weightInGrammes, boolean safetyCertified) throws IllegalAccessException {
+    public Helmet(int weightInGrammes, boolean safetyCertified) throws IllegalArgumentException{
         // Ensuring that the weight is greater than 0
         if (weightInGrammes <= 0) {
-            throw new IllegalAccessException("Weight must be > 0");
+            throw new IllegalArgumentException("Weight must be > 0");
         }
         this.weightInGrammes = weightInGrammes;
         this.safetyCertified = safetyCertified;
@@ -38,19 +38,12 @@ public class Helmet implements Headgear {
 
         return this.safetyCertified;
     }
-     //Tester!!
-    public class HeadgearTest {
 
-        public static void main(String [] args) throws IllegalAccessException {
-            // creating a helmet object
-            Helmet helmet = new Helmet(500, true);
-            // print out the properties
-            System.out.println("Weight: " + helmet.getWeight());
-            System.out.println("Type: " + helmet.getType());
-            System.out.println("Safety Certified: " + helmet.isSafetyCertified());
-        }
-
+    @Override
+    public double valueComputed() {
+        return 0;
     }
+    
 }
 
 

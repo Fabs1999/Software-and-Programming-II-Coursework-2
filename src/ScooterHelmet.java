@@ -4,7 +4,7 @@ public class ScooterHelmet extends ProtectiveHeadgear {
 
     private boolean hasVisor;
 
-    public ScooterHelmet(double protectionFactor, boolean hasVisor) throws IllegalAccessException {
+    public ScooterHelmet(double protectionFactor, boolean hasVisor) throws IllegalArgumentException {
         super(protectionFactor);
         this.hasVisor = hasVisor;
     }
@@ -20,4 +20,5 @@ public class ScooterHelmet extends ProtectiveHeadgear {
         return "Scooter Helmet with visor: " + hasVisor + ", protection factor: " +
                 getProtectionFactor() + ", value: " + computeValue();
     }
+
 }

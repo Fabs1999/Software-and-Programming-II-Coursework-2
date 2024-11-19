@@ -9,13 +9,13 @@ public class Hat implements Headgear{
     private int weightInGrammes;
     private String material;
 
-    public Hat(int weightInGrammes, String material) throws IllegalAccessException {
+    public Hat(int weightInGrammes, String material) throws IllegalArgumentException {
         // validade the weight is greater than 0
         if (weightInGrammes <=0) {
-            throw new IllegalAccessException("Weight must be > 0");
+            throw new IllegalArgumentException("Weight must be > 0");
         } // validade that it's not null or blank
         if (material == null || material.isBlank()){
-            throw new IllegalAccessException("Material cannot be null ro blank");
+            throw new IllegalArgumentException("Material cannot be null ro blank");
         }
         // initialize fields with validade values
         this.weightInGrammes = weightInGrammes;
@@ -36,5 +36,10 @@ public class Hat implements Headgear{
     @Override
     public boolean isSafetyCertified() {
         return false; // hats are not safety certified!!
+    }
+
+    @Override
+    public double valueComputed() {
+        return 0;
     }
 }

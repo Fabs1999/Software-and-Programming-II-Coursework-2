@@ -16,9 +16,9 @@ public class Crown implements Headgear{
         return 0;
     }
 
-    @Override
+
     public String getType() {
-        return getType();
+        return "Crown";
     }
 
     @Override
