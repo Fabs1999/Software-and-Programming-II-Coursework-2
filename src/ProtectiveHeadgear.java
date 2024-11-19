@@ -28,4 +28,6 @@ public abstract class ProtectiveHeadgear implements Headgear {
     public String toString() {
         return "Protection Factor: " + protectionFactor;
     }
+
+    public abstract double computeValue();
 }
