@@ -3,6 +3,15 @@ package src;
 public class BobbleHat extends ProtectiveHeadgear {
     private int bobbleDiameter;
 
+    /**
+     * Creates a Bobble hat with a specific protection factor and bobble diameter.
+     *
+     * @param protectionFactor the level of protection this hat offers must be NON-NEGATIVE
+     * @param bobbleDiameter the diameter of the bobble in millimeters - and it has to be positive
+     * @throws IllegalArgumentException if the bobble diameter is invalid.
+     * @throws IllegalAccessException just in case if it's invalid.
+     */
+
     public BobbleHat(double protectionFactor, int bobbleDiameter) throws IllegalArgumentException, IllegalAccessException {
         super(protectionFactor);
         if (bobbleDiameter <= 0){
@@ -12,7 +21,7 @@ public class BobbleHat extends ProtectiveHeadgear {
     }
 
     public double computeValue(){
-        return bobbleDiameter * 4 * getProtectionFactor();
+        return bobbleDiameter * 4 * getProtectionFactor(); // return 0, as it uses a different value logic
     }
 
     @Override
@@ -34,7 +43,7 @@ public class BobbleHat extends ProtectiveHeadgear {
 
 
     public boolean isSafetyCertified() {
-        return false;
+        return false; // alays false as bobble hats are not for safety
     }
 
 
